@@ -1003,10 +1003,6 @@ a:hover {
   line-height: 1.5;
 }
 
-  {
-  background: #fff;
-}
-
 .block-4 .block-4-text h3 {
   font-size: 20px;
   margin-bottom: 0;
@@ -1134,7 +1130,7 @@ a:hover {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  <<<<<<< HEAD right: 3px;
+  right: 3px;
 }
 
 .block-8 .post-meta {
