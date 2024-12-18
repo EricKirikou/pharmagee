@@ -15,11 +15,193 @@
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
   <link rel="stylesheet" href="css/aos.css">
 
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Navbar Container */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      /* Spread items horizontally */
+      align-items: center;
+      /* Center items vertically */
+      background-color: #00695c;
+      /* Teal background */
+      padding: 15px 20px;
+      color: white;
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+    }
+
+    /* Left Section: Social Links */
+    .navbar .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .left a {
+      color: white;
+      margin: 0 10px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .navbar .left a:hover {
+      color: #80cbc4;
+      /* Light teal for hover */
+    }
+
+    /* Center Section: Contact Info */
+    .navbar .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+      /* Space between sections */
+    }
+
+    .navbar .center p {
+      font-size: 16px;
+      margin: 20px 0px;
+    }
+
+    .navbar .center p span {
+      font-size: 16px;
+      margin: 0 10px;
+      color: #03ddc4;
+    }
+
+    .navbar .center p .diff {
+      font-size: 16px;
+      margin: 0px 20px;
+      color: #ffffff;
+    }
+
+    /* Right Section: Our Delivers To */
+    .navbar .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .right p {
+      font-size: 16px;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1200px) {
+      .navbar {
+        padding: 10px 15px;
+        /* Adjust padding for medium screens */
+      }
+
+      .navbar .left a {
+        font-size: 16px;
+        /* Adjust font size for better readability */
+      }
+
+      .navbar .center p {
+        font-size: 14px;
+        /* Adjust font size for better readability */
+      }
+    }
+
+    @media (max-width: 992px) {
+
+      /* Stack items for medium screens (tablets and smaller screens) */
+      .navbar {
+        flex-direction: column;
+        /* Stack vertically */
+        align-items: flex-start;
+        /* Align items to the left */
+        padding: 15px 20px;
+      }
+
+      .navbar .left,
+      .navbar .center,
+      .navbar .right {
+        width: 100%;
+        /* Make sections full-width */
+        justify-content: center;
+        margin-bottom: 10px;
+        /* Space between sections */
+      }
+
+      .navbar .left a {
+        font-size: 16px;
+        margin: 0 8px;
+      }
+
+      .navbar .center p {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .navbar .right p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .navbar .left,
+      .navbar .center,
+      .navbar .right {
+        justify-content: center;
+        margin-bottom: 10px;
+        /* Space between sections */
+      }
+
+      .navbar .left a {
+        font-size: 14px;
+        /* Smaller font size on very small screens */
+      }
+
+      .navbar .center p,
+      .navbar .right p {
+        font-size: 12px;
+        /* Smaller font size on very small screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      /* For small mobile screens */
+      .navbar {
+        padding: 10px;
+        /* Reduce padding */
+      }
+
+      .navbar .left a {
+        font-size: 14px;
+        margin: 0 6px;
+        /* Reduce margin for smaller screens */
+      }
+
+      .navbar .center p {
+        font-size: 12px;
+      }
+
+      .navbar .right p {
+        font-size: 12px;
+      }
+    }
+  </style>
 
 </head>
 
@@ -27,9 +209,7 @@
 
   <div class="site-wrap">
 
-
     <div class="site-navbar py-2">
-
       <div class="search-wrap">
         <div class="container">
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
@@ -38,7 +218,28 @@
           </form>
         </div>
       </div>
+      <!-- First Navbar -->
+      <div class="navbar">
+        <!-- Left Section: Social Links -->
+        <div class="left">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
 
+        <!-- Center Section: Contact Info -->
+        <div class="center">
+          <p>Contact us: +123 456 7890 <a href=""><span class="text-teal-300">info@pharmageorgechemist.com</span></a>
+          </p>
+        </div>
+
+        <!-- Right Section: Our Delivers To -->
+        <div class="right">
+          <a href="#" class="text-white hover:text-teal-600">
+            <p>We Deliver To</p>
+          </a>
+        </div>
+      </div>
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
@@ -66,7 +267,6 @@
                     </li>
                     <li><a href="#">Diet &amp; Nutrition</a></li>
                     <li><a href="#">Tea &amp; Coffee</a></li>
-                    
                   </ul>
                 </li>
                 <li><a href="#">About</a></li>
@@ -75,18 +275,21 @@
               </ul>
             </nav>
           </div>
-          <div class="icons">
+          <div class="icons d-flex align-items-center">
             <a href="cart.html" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
             <a href="cart.html" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
             </a>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
-                class="icon-menu"></span></a>
+            <!-- Book Appointment Button -->
+            <a href="#" class="book-appointment-btn d-inline-block ml-3">
+              Book Appointment
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
           </div>
         </div>
       </div>
-    </div>
+      
 
     <div class="site-blocks-cover" style="background-image: url('images/hero_1.jpg');">
       <div class="container">
@@ -177,8 +380,8 @@
           </div>
           <div class="col-sm-6 col-lg-4 text-center item mb-4">
             <a href="#"> <img src="images/product_05.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="#">	
-              ATORVASTATIN 40MG TABLET TEVA</a></h3>
+            <h3 class="text-dark"><a href="#">
+                ATORVASTATIN 40MG TABLET TEVA</a></h3>
             <p class="price">GHS 3.00</p>
           </div>
           <div class="col-sm-6 col-lg-4 text-center item mb-4">
@@ -196,7 +399,7 @@
       </div>
     </div>
 
-    
+
     <div class="site-section bg-light">
       <div class="container">
         <div class="row">
@@ -216,7 +419,8 @@
 
               <div class="text-center item mb-4">
                 <a href="#"> <img src="images\product_1.png" alt="Image"></a>
-                <h3 class="text-dark"><a href="#">AFRICLAV 625MG (AMOXICILLIN + CLAVULANATE POTASSIUM TABLET) 14'S</a></h3>
+                <h3 class="text-dark"><a href="#">AFRICLAV 625MG (AMOXICILLIN + CLAVULANATE POTASSIUM TABLET) 14'S</a>
+                </h3>
                 <p class="price">GHS 3.00</p>
               </div>
 
@@ -248,46 +452,54 @@
         <div class="row">
           <div class="col-md-12 block-3 products-wrap">
             <div class="nonloop-block-3 no-direction owl-carousel">
-        
+
               <div class="testimony">
                 <blockquote>
                   <img src="images/person_1.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                  <p>&ldquo;PHARMAGEORGE CHEMIST LTD offers top-notch products that I can rely on. Whether it's over-the-counter remedies or prescription medications, their products are always effective and safe. I appreciate their quick delivery and outstanding 
+                  <p>&ldquo;PHARMAGEORGE CHEMIST LTD offers top-notch products that I can rely on. Whether it's
+                    over-the-counter remedies or prescription medications, their products are always effective and safe.
+                    I appreciate their quick delivery and outstanding
                     customer service. It’s refreshing to find a pharmacy I can trust!&rdquo;</p>
                 </blockquote>
 
                 <p>&mdash; Kofi Nash</p>
               </div>
-        
+
               <div class="testimony">
                 <blockquote>
                   <img src="images/person_2.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                  <p>&ldquo;I've been a loyal customer of PHARMAGEORGE CHEMIST LTD for years, and their products never disappoint! The quality is consistently excellent, and their wide range of medicines ensures I always find what I need. The staff is knowledgeable 
+                  <p>&ldquo;I've been a loyal customer of PHARMAGEORGE CHEMIST LTD for years, and their products never
+                    disappoint! The quality is consistently excellent, and their wide range of medicines ensures I
+                    always find what I need. The staff is knowledgeable
                     and always willing to assist with any questions. I trust them for all my health needs.&rdquo;</p>
                 </blockquote>
-              
+
                 <p>&mdash; Eric Gyamfi</p>
               </div>
-        
+
               <div class="testimony">
                 <blockquote>
                   <img src="images/person_3.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                  <p>&ldquo; PHARMAGEORGE CHEMIST LTD is my go-to pharmacy for all things health-related. Their products are of the highest quality, and I've noticed a significant improvement in my well-being since I started using them. The service is always professional, and they 
+                  <p>&ldquo; PHARMAGEORGE CHEMIST LTD is my go-to pharmacy for all things health-related. Their products
+                    are of the highest quality, and I've noticed a significant improvement in my well-being since I
+                    started using them. The service is always professional, and they
                     deliver fast, making it super convenient for busy people like me. Highly recommend!&rdquo;</p>
                 </blockquote>
                 <p>&mdash; Peter Gibson</p>
               </div>
-        
+
               <div class="testimony">
                 <blockquote>
                   <img src="images/person_4.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                  <p>&ldquo;I recently started purchasing from PHARMAGEORGE CHEMIST LTD, and I couldn't be happier. Their supplements have really helped with my energy levels, and I feel so much better. The customer service is exceptional, and I appreciate their attention 
+                  <p>&ldquo;I recently started purchasing from PHARMAGEORGE CHEMIST LTD, and I couldn't be happier.
+                    Their supplements have really helped with my energy levels, and I feel so much better. The customer
+                    service is exceptional, and I appreciate their attention
                     to detail. I will definitely continue to shop here for all my pharmaceutical needs.&rdquo;</p>
                 </blockquote>
-              
+
                 <p>&mdash; Mark Coleman</p>
               </div>
-        
+
             </div>
           </div>
         </div>
@@ -301,7 +513,8 @@
             <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_1.jpg');">
               <div class="banner-1-inner align-self-center">
                 <h2>PHARMAGEORGE CHEMIST LTD Products</h2>
-                <p>PHARMAGEORGE CHEMIST LTD is renowned for offering high-quality products that meet the highest standards of safety and effectiveness.
+                <p>PHARMAGEORGE CHEMIST LTD is renowned for offering high-quality products that meet the highest
+                  standards of safety and effectiveness.
                 </p>
               </div>
             </a>
@@ -310,7 +523,8 @@
             <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_2.jpg');">
               <div class="banner-1-inner ml-auto  align-self-center">
                 <h2>Rated by Experts</h2>
-                <p>PHARMAGEORGE CHEMIST LTD offers high-quality products, rated by experts for their reliability, safety, and effectiveness
+                <p>PHARMAGEORGE CHEMIST LTD offers high-quality products, rated by experts for their reliability,
+                  safety, and effectiveness
                 </p>
               </div>
             </a>
@@ -327,7 +541,8 @@
 
             <div class="block-7">
               <h3 class="footer-heading mb-4">About Us</h3>
-              <p>Pharmageorge Chemist Limited is a trusted leader in providing high-quality pharmaceutical products and services.</p>
+              <p>Pharmageorge Chemist Limited is a trusted leader in providing high-quality pharmaceutical products and
+                services.</p>
             </div>
 
           </div>

@@ -48,6 +48,33 @@ a {
     opacity: 1;
     visibility: visible; }
 
+/* Styling for Book Appointment Button */
+.book-appointment-btn {
+  background: linear-gradient(90deg, #00bcd4, #4caf50); /* Gradient color */
+  padding: 8px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.book-appointment-btn:hover {
+  background: linear-gradient(90deg, #4caf50, #00bcd4); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Mobile responsive button styles */
+@media (max-width: 768px) {
+  .book-appointment-btn {
+    font-size: 14px; /* Smaller font size for mobile */
+    padding: 6px 15px; /* Smaller padding on mobile */
+  }
+}
+
+
 .btn {
   -webkit-transition: .3s all ease-in-out;
   -o-transition: .3s all ease-in-out;
